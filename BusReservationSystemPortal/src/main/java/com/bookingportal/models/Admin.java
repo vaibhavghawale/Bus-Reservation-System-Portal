@@ -24,10 +24,12 @@ public class Admin {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer adminId;
 	
-	@NotNull(message = "Name cannot be null!")
-	@NotBlank(message = "Name connot be blank!")
+	@NotNull(message = "First Name cannot be null!")
+	@NotBlank(message = "First Name connot be blank!")
 	private String firstName;
 	
+	@NotNull(message = "Last Name cannot be null!")
+	@NotBlank(message = "Last Name connot be blank!")
 	private String lastName;
 
 	@NotNull(message="Password cannot be null!")

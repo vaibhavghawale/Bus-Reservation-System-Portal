@@ -37,8 +37,8 @@ public class Feedback {
 	private String comments;
 	private LocalDateTime feedbackDateTime;
 	
-//	@OneToOne
-//	private User user;
+	@OneToOne
+	private User user;
 
 	@OneToOne
 	private Bus bus;

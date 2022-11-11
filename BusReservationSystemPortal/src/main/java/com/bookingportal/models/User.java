@@ -31,10 +31,12 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer userId;
 
-	@NotNull(message = "Name cannot be null!")
-	@NotBlank(message = "Name connot be blank!")
+	@NotNull(message = "First Name cannot be null!")
+	@NotBlank(message = "First Name connot be blank!")
 	private String firstName;
 	
+	@NotNull(message = "Last Name cannot be null!")
+	@NotBlank(message = "Last Name connot be blank!")
 	private String lastName;
 	
 	@NotNull(message="Password cannot be null!")
@@ -52,6 +54,8 @@ public class User {
 	@Email
 	private String email;
 	
+	
+	//mapping a relation between user and reservation (one to many )
 	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL,mappedBy = "user")
 	private List<Reservation> reservations =new ArrayList<>();

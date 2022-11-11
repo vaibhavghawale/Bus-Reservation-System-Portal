@@ -1,9 +1,11 @@
 package com.bookingportal.services;
 
+import java.util.List;
+
 import com.bookingportal.exceptions.RouteException;
 import com.bookingportal.models.Route;
 
-import antlr.collections.List;
+
 
 public interface RouteService {
 	
@@ -12,5 +14,5 @@ public interface RouteService {
 	public Route updateRoute(Route route,String key) throws RouteException; 
 	public Route deleteRoute(int routeId,String key) throws RouteException;
 	public Route viewRoute(int routeId) throws RouteException;
-	//public List<Route> viewAllRoute() throws RouteException;
+	public List<Route> viewAllRoute() throws RouteException;
 }

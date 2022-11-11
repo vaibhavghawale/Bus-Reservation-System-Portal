@@ -12,7 +12,6 @@ import com.bookingportal.repositories.ReservationDao;
 
 
 @Service
-
 public class ReservationServiceImpl implements ReservationService {
 	
 	@Autowired

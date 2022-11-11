@@ -45,9 +45,9 @@ public class Route {
 	
 	private Integer distance;
 	
-//	@JsonIgnore
-//	@OneToMany(cascade = CascadeType.ALL, mappedBy = "route")
-//	private List<Bus> busList = new ArrayList<>();
+	@JsonIgnore
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "route")
+	private List<Bus> busList = new ArrayList<>();
 	
 	
 	
@@ -72,6 +72,7 @@ public class Route {
 		return Objects.equals(distance, other.distance) && Objects.equals(routeFrom, other.routeFrom)
 				&& Objects.equals(routeId, other.routeId) && Objects.equals(routeTo, other.routeTo);
 	}
+	
 	
 
 	
