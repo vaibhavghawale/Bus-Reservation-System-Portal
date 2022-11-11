@@ -40,8 +40,8 @@ public class Feedback {
 //	@OneToOne
 //	private User user;
 
-//	@OneToOne
-//	private Bus bus;
+	@OneToOne
+	private Bus bus;
 
 	
 	

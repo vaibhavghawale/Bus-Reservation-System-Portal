@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.bookingportal.exceptions.FeedBackException;
 import com.bookingportal.models.Feedback;
+import com.bookingportal.repositories.BusDao;
 import com.bookingportal.repositories.FeedbackDao;
 
 @Service
@@ -19,9 +20,9 @@ public class FeedbackServiceImpl implements FeedbackService {
 //	@Autowired
 //	private UserDao userDao;
 //
-//	@Autowired
-//	private BusDao busDao;
-//	
+	@Autowired
+	private BusDao busDao;
+	
 //	@Autowired
 //	private UserSessionDao userSessionDao;
 
@@ -36,20 +37,14 @@ public class FeedbackServiceImpl implements FeedbackService {
 //		// TODO Auto-generated method stub
 //		return null;
 //	}
-//
-//	@Override
-//	public Feedback deleteFeedBack(Integer feedbackId, String key) throws FeedBackException, UserException {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
 
 	@Override
 	public Feedback viewFeedback(Integer id) throws FeedBackException {
 		// TODO Auto-generated method stub
-		Optional<Feedback> fedOptional = feedDao.findById(id);
-		if (fedOptional.isPresent()) {
+		Optional<Feedback> feedOptional = feedDao.findById(id);
+		if (feedOptional.isPresent()) {
 
-			return fedOptional.get();
+			return feedOptional.get();
 
 		}
 		throw new FeedBackException("No feedback found!");
@@ -59,10 +54,10 @@ public class FeedbackServiceImpl implements FeedbackService {
 	@Override
 	public List<Feedback> viewFeedbackAll() throws FeedBackException {
 		// TODO Auto-generated method stub
-		Optional<List<Feedback>> fedOptional = Optional.of(feedDao.findAll());
-		if (fedOptional.isPresent()) {
+		Optional<List<Feedback>> feedOptional = Optional.of(feedDao.findAll());
+		if (feedOptional.isPresent()) {
 
-			return fedOptional.get();
+			return feedOptional.get();
 
 		}
 		throw new FeedBackException("No feedbacks found!");

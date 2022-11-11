@@ -44,5 +44,16 @@ public class GlobalException {
 		
 		return new ResponseEntity<>(error,HttpStatus.EXPECTATION_FAILED);
 	}
+	
+	//feedback
+	@ExceptionHandler(FeedBackException.class)
+	public ResponseEntity<MyErrorDetail> feedbackException(FeedBackException feedbackEx,WebRequest web){
+		
+	MyErrorDetail error = new MyErrorDetail(LocalDateTime.now(),feedbackEx.getMessage(), web.getDescription(false));
+		
+		return new ResponseEntity<>(error,HttpStatus.BAD_REQUEST);
+	}
+	
+	
 }
 	
