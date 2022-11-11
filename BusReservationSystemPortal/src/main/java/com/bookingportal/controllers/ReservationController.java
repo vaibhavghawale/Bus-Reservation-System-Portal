@@ -2,6 +2,8 @@ package com.bookingportal.controllers;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,9 +14,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.bookingportal.DTO.ReservationDTO;
+import com.bookingportal.exceptions.AdminException;
 import com.bookingportal.exceptions.BusException;
 import com.bookingportal.exceptions.ReservationException;
+import com.bookingportal.exceptions.UserException;
 import com.bookingportal.models.Reservation;
+import com.bookingportal.services.ReservationService;
+
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
 @RestController

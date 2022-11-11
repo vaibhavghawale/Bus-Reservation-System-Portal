@@ -12,6 +12,35 @@ import org.springframework.web.servlet.NoHandlerFoundException;
 
 @ControllerAdvice
 public class GlobalException {
+	
+	
+	@ExceptionHandler(AdminException.class)
+	public ResponseEntity<Error> adminException(AdminException adminEx,WebRequest web){
+		
+		Error error = new Error(LocalDateTime.now(),adminEx.getMessage(), web.getDescription(false));
+		
+		return new ResponseEntity<>(error,HttpStatus.BAD_REQUEST);
+	}
+	
+	@ExceptionHandler(UserException.class)
+	public ResponseEntity<Error> userException(UserException userEx,WebRequest web){
+		
+		Error error = new Error(LocalDateTime.now(),userEx.getMessage(), web.getDescription(false));
+		
+		return new ResponseEntity<>(error,HttpStatus.BAD_REQUEST);
+	}
+	
+	
+	@ExceptionHandler(LoginException.class)
+	public ResponseEntity<Error> loginException(LoginException loginEx,WebRequest web){
+		
+		Error error = new Error(LocalDateTime.now(),loginEx.getMessage(), web.getDescription(false));
+		
+		return new ResponseEntity<>(error,HttpStatus.BAD_REQUEST);
+	}
+	
+
+	
 	@ExceptionHandler(ReservationException.class)
 	public ResponseEntity<MyErrorDetail> reservationException(ReservationException reservationEx,WebRequest web){
 		
