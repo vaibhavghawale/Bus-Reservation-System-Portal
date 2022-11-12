@@ -16,14 +16,14 @@ import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.Setter;
 
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -48,18 +48,13 @@ public class Route {
 	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "route")
 	private List<Bus> busList = new ArrayList<>();
-	
-	
-	
-	
-	
-	
-	
+//1 bus to many route
 	
 	@Override
 	public int hashCode() {
-		return Objects.hash(distance, routeFrom, routeId, routeTo);
+		return Objects.hash(busList, distance, routeFrom, routeId, routeTo);
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -69,12 +64,19 @@ public class Route {
 		if (getClass() != obj.getClass())
 			return false;
 		Route other = (Route) obj;
-		return Objects.equals(distance, other.distance) && Objects.equals(routeFrom, other.routeFrom)
-				&& Objects.equals(routeId, other.routeId) && Objects.equals(routeTo, other.routeTo);
+		return Objects.equals(busList, other.busList) && Objects.equals(distance, other.distance)
+				&& Objects.equals(routeFrom, other.routeFrom) && Objects.equals(routeId, other.routeId)
+				&& Objects.equals(routeTo, other.routeTo);
 	}
 	
 	
-
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

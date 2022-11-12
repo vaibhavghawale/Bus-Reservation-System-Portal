@@ -131,13 +131,15 @@ Optional<Bus> bus=busDao.findById(busId);
 
 	@Override
 	public List<Bus> viewAllBuses() throws BusException {
-    List<Bus> listOfBusType = busDao.findByBusType(BusType);
-		
-		if(listOfBusType.size() >0)
-			return listOfBusType;
-		else
-			throw new BusException("There is no bus of type "+ BusType);
+		 List<Bus> listOfBusType = busDao.findByBusType(BusType);
+			
+			if(listOfBusType.size() >0)
+				return listOfBusType;
+			else
+				throw new BusException("There is no bus of type "+ BusType);
 	}
+
+
 	
 	
 
