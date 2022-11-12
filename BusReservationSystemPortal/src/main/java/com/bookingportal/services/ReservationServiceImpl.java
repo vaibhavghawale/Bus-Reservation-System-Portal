@@ -12,19 +12,19 @@ import com.bookingportal.repositories.ReservationDao;
 
 
 @Service
+
 public class ReservationServiceImpl implements ReservationService {
 	
 	@Autowired
 	private ReservationDao reservationDao;
-	
 
 	@Override
 	public Reservation addReservation(ReservationDTO reservationDTO, String key)
 			throws ReservationException, BusException {
-		// TODO Auto-generated method stub
 		return null;
 	}
-
+	
+	
 	@Override
 	public Reservation deleteReservation(Integer reservationId, String key) throws ReservationException, BusException {
 		// TODO Auto-generated method stub
@@ -48,5 +48,7 @@ public class ReservationServiceImpl implements ReservationService {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 
 }

@@ -14,10 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.bookingportal.DTO.ReservationDTO;
-import com.bookingportal.exceptions.AdminException;
 import com.bookingportal.exceptions.BusException;
 import com.bookingportal.exceptions.ReservationException;
-import com.bookingportal.exceptions.UserException;
 import com.bookingportal.models.Reservation;
 import com.bookingportal.services.ReservationService;
 
@@ -46,7 +44,7 @@ public class ReservationController {
 	
 	
 	@GetMapping("/reservation/admin/{id}")
-	public ResponseEntity<Reservation> viewReservation(@PathVariable("id") Integer reservationId,@RequestParam(required = false) String key) throws ReservationException, AdminException{
+	public ResponseEntity<Reservation> viewReservation(@PathVariable("id") Integer reservationId,@RequestParam(required = false) String key) throws ReservationException{
 		Reservation foundReservation = reservationService.viewReservation(reservationId,key);
 		return new ResponseEntity<Reservation>(foundReservation,HttpStatus.OK);
 	}
@@ -60,7 +58,7 @@ public class ReservationController {
 	
 	
 	@GetMapping("/reservation/user")
-	public ResponseEntity<List<Reservation>> viewReservationByUser(@RequestParam(required = false) String key) throws ReservationException, UserException{
+	public ResponseEntity<List<Reservation>> viewReservationByUser(@RequestParam(required = false) String key) throws ReservationException{
 		
 		List<Reservation> reservationList = reservationService.viewReservationByUser(key);
 		return new ResponseEntity<List<Reservation>>(reservationList,HttpStatus.OK);
