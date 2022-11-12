@@ -28,6 +28,7 @@ public class FeedbackServiceImpl implements FeedbackService {
 	@Autowired
 	private UserDao userDao;
 
+
 	@Autowired
 	private BusDao busDao;
 	
@@ -35,33 +36,7 @@ public class FeedbackServiceImpl implements FeedbackService {
 	private UserSessionDao userSessionDao;
 
 
-
-	@Override
-	public Feedback viewFeedback(Integer id) throws FeedBackException {
-		// TODO Auto-generated method stub
-		Optional<Feedback> feedOptional = feedDao.findById(id);
-		if (feedOptional.isPresent()) {
-
-			return feedOptional.get();
-
-		}
-		throw new FeedBackException("No feedback found!");
-		
-	}
-
-	@Override
-	public List<Feedback> viewFeedbackAll() throws FeedBackException {
-		// TODO Auto-generated method stub
-		Optional<List<Feedback>> feedOptional = Optional.of(feedDao.findAll());
-		if (feedOptional.isPresent()) {
-
-			return feedOptional.get();
-
-		}
-		throw new FeedBackException("No feedbacks found!");
-		
-	}
-
+	
 	@Override
 	public Feedback addFeedBack(Feedback feedBack, Integer busId, String key) throws BusException, UserException {
 CurrentUserSession loggedInUser= userSessionDao.findByUuid(key);
@@ -89,7 +64,7 @@ CurrentUserSession loggedInUser= userSessionDao.findByUuid(key);
 
 	@Override
 	public Feedback updateFeedBack(Feedback feedback, String key) throws FeedBackException, UserException {
-CurrentUserSession loggedInUser= userSessionDao.findByUuid(key);
+     CurrentUserSession loggedInUser= userSessionDao.findByUuid(key);
 		
 		if(loggedInUser == null) {
 			throw new UserException("Please provide a valid key to update Feedback!");
@@ -117,5 +92,34 @@ CurrentUserSession loggedInUser= userSessionDao.findByUuid(key);
 
 	}
 
+	
+
+	@Override
+	public Feedback viewFeedback(Integer id) throws FeedBackException {
+		// TODO Auto-generated method stub
+		Optional<Feedback> feedOptional = feedDao.findById(id);
+		if (feedOptional.isPresent()) {
+
+			return feedOptional.get();
+
+		}
+		throw new FeedBackException("No feedback found!");
+		
+	}
+
+	@Override
+	public List<Feedback> viewFeedbackAll() throws FeedBackException {
+		// TODO Auto-generated method stub
+		Optional<List<Feedback>> feedOptional = Optional.of(feedDao.findAll());
+		if (feedOptional.isPresent()) {
+
+			return feedOptional.get();
+
+		}
+		throw new FeedBackException("No feedbacks found!");
+		
+	}
+
+	
 }
 
