@@ -55,7 +55,8 @@ public class User {
 	private String email;
 	
 	
-	//mapping a relation between user and reservation (one to many )
+	//It is a bidirectnoal relation between user and reservation (one to many )
+	//USER <-----------> RESERVATION (ONE TO MANY)
 	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL,mappedBy = "user")
 	private List<Reservation> reservations =new ArrayList<>();

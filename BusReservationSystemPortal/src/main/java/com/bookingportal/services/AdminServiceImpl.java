@@ -24,7 +24,7 @@ public class AdminServiceImpl implements AdminService{
 		Admin existingAdmin= adminDao.findByMobileNumber(admin.getMobileNumber());
 		
 		if(existingAdmin != null) 
-			throw new AdminException("Admin already registered with this Mobile number!");
+			throw new AdminException("Mobile number is already existed, admin cannot be created...!");
 		
 		return adminDao.save(admin);
 	
@@ -36,7 +36,7 @@ public class AdminServiceImpl implements AdminService{
 		CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 		
 		if(loggedInAdmin == null) {
-			throw new AdminException("Please provide a valid key to update Admin Details!");
+			throw new AdminException("Please enter valid key for updating Admin Details...!");
 		}
 		
 		if(admin.getAdminId() == loggedInAdmin.getAdminId()) {
@@ -44,7 +44,7 @@ public class AdminServiceImpl implements AdminService{
 			return adminDao.save(admin);
 		}
 		else
-			throw new AdminException("Invalid Admin Details! please login first.");
+			throw new AdminException("Invalid Admin Details, please login first...!");
 	}
 
 }

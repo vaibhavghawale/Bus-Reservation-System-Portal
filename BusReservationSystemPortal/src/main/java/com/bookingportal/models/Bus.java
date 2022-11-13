@@ -28,19 +28,24 @@ public class Bus {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer busId;
 	@NotNull(message = "Bus name cannot be null!")
+	@NotBlank(message = "Bus name cannot be blank...!")
 	private String busName;
 	@NotNull(message = "Bus driver name cannot be null!")
 	private String driverName;
+	
+	@NotNull(message = "Bus Type cannot be null!")
+	@NotBlank(message = "Bus Type cannot be blank...!")
 	private String busType;
 	
 	@NotNull(message = "Bus registeration number cannot be null!")
 	private String busRegNumber;
 	
-	@NotNull(message = "Start point cannot be null!")
-	@NotBlank(message = "Start point cannot be blank!")
+	@NotNull(message = "Start point cannot be null..!")
+	@NotBlank(message = "Start point cannot be blank..!")
 	private String routeFrom;
-	@NotNull(message = "Destination point cannot be null!")
-	@NotBlank(message = "Destination point cannot be blank!")
+	
+	@NotNull(message = "Destination point cannot be null..!")
+	@NotBlank(message = "Destination point cannot be blank..!")
 	private String routeTo;
 	
 	@NotNull(message = "Arrival time cannot be null!")
@@ -57,7 +62,7 @@ public class Bus {
 	@NotNull(message = "Available seats cannot be null!")
 	private Integer availableSeats;
 	
-	@NotNull(message = "Fare cannot be null!")
+	@NotNull(message = "Travelling fare cannot be null!")
 	private Integer farePerSeat;
 	
 	@NotNull(message = "Bus journey date cannot be null!")
@@ -65,6 +70,10 @@ public class Bus {
 	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private LocalDate busJourneyDate;
 	
+
+	
+	//it is a bidirectional relation between bus and route.
+	//BUS <------------->ROUTE (many TO ONE)
 	@ManyToOne
 	private Route route;
 	

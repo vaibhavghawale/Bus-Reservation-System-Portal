@@ -28,19 +28,19 @@ public class BusServiceImpl implements BusService{
 
 	@Autowired
 	private BusDao busDao;
-	
 	@Autowired
 	private RouteDao routeDao;
-	
 	@Autowired
 	private AdminSessionDao adminSessionDao;
+	
+	
 
 	@Override
 	public Bus addBus(Bus bus, String key) throws BusException, AdminException {
-CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
+    CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 		
 		if(loggedInAdmin == null) {
-			throw new AdminException("Please provide a valid key to add bus!");
+			throw new AdminException("Please provide a valid key...!");
 		}
 		
 		Route route=routeDao.findByRouteFromAndRouteTo(bus.getRouteFrom(), bus.getRouteTo());
@@ -51,7 +51,7 @@ CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 			return busDao.save(bus);
 		}
 		else
-			throw new BusException("Bus detail is not correct");
+			throw new BusException("Please provide valid bus details..");
 		
 		
 	}
@@ -61,7 +61,7 @@ CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 		
 		if(loggedInAdmin == null) {
-			throw new AdminException("Please provide a valid key to update bus!");
+			throw new AdminException("Please provide a valid key for update...!");
 		}
 		
 		Optional<Bus> existingBusOpt=busDao.findById(bus.getBusId());
@@ -70,23 +70,23 @@ CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 			
 			Bus existingBus = existingBusOpt.get();
 			
-			if(existingBus.getAvailableSeats()!=existingBus.getSeats()) throw new BusException("Cannot update already scheduled bus!");
+			if(existingBus.getAvailableSeats()!=existingBus.getSeats()) throw new BusException("Bus details already exist..!");
 			
 			Route route=routeDao.findByRouteFromAndRouteTo(bus.getRouteFrom(), bus.getRouteTo());
-			if(route == null) throw new BusException("Invalid route!");
+			if(route == null) throw new BusException("Provided route in not valid...!");
 			bus.setRoute(route);
 			return busDao.save(bus);
 		}
 		else
-			throw new BusException("Bus doesn't exist with busId : "+ bus.getBusId());
+			throw new BusException("Bus can't found with this busId : "+ bus.getBusId());
 	}
 
 	@Override
 	public Bus deleteBus(Integer busId, String key) throws BusException, AdminException {
-CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
+    CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 		
 		if(loggedInAdmin == null) {
-			throw new AdminException("Please provide a valid key to delete bus!");
+			throw new AdminException("Please provide a valid key to delete bus...!");
 		}
 		
 		Optional<Bus> bus=busDao.findById(busId);
@@ -96,7 +96,7 @@ CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 			Bus existingBus = bus.get();			
 			
 			if(LocalDate.now().isBefore(existingBus.getBusJourneyDate()) && existingBus.getAvailableSeats()!=existingBus.getSeats())
-				throw new BusException("Cannot delete as the bus is scheduled and reservations are booked for the bus.");
+				throw new BusException("Bus is having reservations, cannot be deleted...!");
 			
 			
 			busDao.delete(existingBus);
@@ -126,7 +126,7 @@ CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 		if(buses.size()>0)
 			return buses;
 		else
-			throw new BusException("There is no bus availabe now");
+			throw new BusException("There is no bus available in this portal...!");
 	}
 
 	@Override

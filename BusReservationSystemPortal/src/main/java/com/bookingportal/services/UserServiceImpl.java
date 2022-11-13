@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
 		User existingUser= userDao.findByMobileNumber(user.getMobileNumber());
 		
 		if(existingUser != null) 
-			throw new UserException("User already registered with this Mobile number!");
+			throw new UserException("Mobile number is already existed, User cannot be created...!");
 			
 		
 		return userDao.save(user);
@@ -44,7 +44,7 @@ public class UserServiceImpl implements UserService {
 		CurrentUserSession loggedInUser= userSessionDao.findByUuid(key);
 		
 		if(loggedInUser == null) {
-			throw new UserException("Please provide a valid key to update a User Details!");
+			throw new UserException("Please enter valid key for updating user Details...!");
 		}
 		
 		if(user.getUserId() == loggedInUser.getUserId()) {
@@ -53,7 +53,7 @@ public class UserServiceImpl implements UserService {
 			return userDao.save(user);
 		}
 		else
-			throw new UserException("Invalid User Details! please login first.");
+			throw new UserException("Invalid Admin Details, please login first...!");
 	}
 	
 	
@@ -63,7 +63,7 @@ public class UserServiceImpl implements UserService {
 		CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 		
 		if(loggedInAdmin == null) {
-			throw new AdminException("Please provide a valid key to delete user!");
+			throw new AdminException("Please enter a valid key for delete user...!");
 		}
 		User user = userDao.findById(userId).orElseThrow(()-> new UserException("Invalid user Id!"));
 		userDao.delete(user);
@@ -77,7 +77,7 @@ public class UserServiceImpl implements UserService {
 		CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 		
 		if(loggedInAdmin == null) {
-			throw new AdminException("Please provide a valid key to view user datails!");
+			throw new AdminException("Please enter valid key for view user Details...!");
 		}
 		
 		User user = userDao.findById(userId).orElseThrow(()-> new UserException("Invalid user Id!"));
@@ -90,7 +90,7 @@ public class UserServiceImpl implements UserService {
 		CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 		
 		if(loggedInAdmin == null) {
-			throw new AdminException("Please provide a valid key to view all users!");
+			throw new AdminException("Please enter valid key for view all user Detail...!");
 		}
 		
 		List<User> userList = userDao.findAll();

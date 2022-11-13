@@ -29,7 +29,7 @@ public class AdminLoginServiceImpl implements AdminLoginService {
 
 		Admin existingAdmin= adminDao.findByMobileNumber(dto.getMobileNumber());
 		
-		if(existingAdmin == null) throw new LoginException("Please Enter a valid mobile number!");
+		if(existingAdmin == null) throw new LoginException("This is not valid mobile number...!");
 		
 		
 		Optional<CurrentAdminSession> validAdminSessionOpt =  adminSessionDao.findById(existingAdmin.getAdminId());
@@ -37,7 +37,7 @@ public class AdminLoginServiceImpl implements AdminLoginService {
 		
 		if(validAdminSessionOpt.isPresent()) {
 			
-			throw new LoginException("Admin already Logged-In with this number");
+			throw new LoginException("Admin already Log-In with this number..!"+validAdminSessionOpt);
 		}
 		
 		if(existingAdmin.getAdminPassword().equals(dto.getAdminPassword())) {
@@ -60,12 +60,12 @@ public class AdminLoginServiceImpl implements AdminLoginService {
 		CurrentAdminSession validAdminSession = adminSessionDao.findByUuid(key);
 		
 		if(validAdminSession == null) {
-			throw new LoginException("Admin Not Logged In with this number");
+			throw new LoginException("Admin Not Logged In with this number"+validAdminSession);
 			
 		}
 		
 		adminSessionDao.delete(validAdminSession);
 		
-		return "Admin Logged Out !";
+		return "Admin Logged Out Succesfully...!";
 	}
 }

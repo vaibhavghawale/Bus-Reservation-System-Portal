@@ -29,7 +29,7 @@ public class UserLoginServiceImpl implements UserLoginService{
 
 		User existingUser= userDao.findByMobileNumber(dto.getMobileNumber());
 		
-		if(existingUser == null) throw new LoginException("Please Enter a valid mobile number");
+		if(existingUser == null) throw new LoginException("This is not valid mobile number...!");
 		
 		
 		Optional<CurrentUserSession> validUserSessionOpt =  userSessionDao.findById(existingUser.getUserId());
@@ -37,7 +37,7 @@ public class UserLoginServiceImpl implements UserLoginService{
 		
 		if(validUserSessionOpt.isPresent()) {
 			
-			throw new LoginException("User already Logged In with this number");
+			throw new LoginException("user already Log-In with this number..!"+validUserSessionOpt);
 		}
 		
 		if(existingUser.getPassword().equals(dto.getPassword())) {
@@ -51,7 +51,7 @@ public class UserLoginServiceImpl implements UserLoginService{
 			return currentUserSession;
 		}
 		else
-			throw new LoginException("Please Enter a valid password!");
+			throw new LoginException("Please Enter a valid password...!");
 	}
 
 	@Override
@@ -60,7 +60,7 @@ public class UserLoginServiceImpl implements UserLoginService{
 		CurrentUserSession validUserSession = userSessionDao.findByUuid(key);
 		
 		if(validUserSession == null) {
-			throw new LoginException("User Not Logged In with this number");
+			throw new LoginException("user Not Logged In with this number"+validUserSession);
 			
 		}
 		

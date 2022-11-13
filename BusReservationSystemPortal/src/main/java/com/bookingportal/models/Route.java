@@ -42,13 +42,16 @@ public class Route {
 	@NotBlank(message = "End point cannot be blank..!")
 	private String routeTo;
 	
-	
+	@NotNull(message = "Didtance cannot be Null..!")
 	private Integer distance;
 	
 	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "route")
 	private List<Bus> busList = new ArrayList<>();
-//1 bus to many route
+	
+	//it is bidiractnal relationship between route to bus
+	// ROUTE <-----------> BUS (ONE TO MANY)
+
 	
 	@Override
 	public int hashCode() {

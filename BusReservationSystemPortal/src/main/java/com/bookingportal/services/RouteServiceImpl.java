@@ -17,7 +17,7 @@ import com.bookingportal.repositories.AdminSessionDao;
 import com.bookingportal.repositories.BusDao;
 import com.bookingportal.repositories.RouteDao;
 
-//import io.swagger.v3.oas.annotations.servers.Server;
+
 
 @Service
 public class RouteServiceImpl  implements RouteService{
@@ -51,10 +51,22 @@ public class RouteServiceImpl  implements RouteService{
 			route.setBusList(buses);
 			return roD.save(route);
 		}else {
-			throw new RouteException("this Route not presen");
+			throw new RouteException("this Route not presen...!");
 		}
 		
 		
+	}
+	
+	@Override
+	public Route viewRoute(int routeId) throws RouteException {
+		
+    Optional<Route> existedRoute=roD.findById(routeId);
+		if(existedRoute.isPresent()) {
+			return existedRoute.get();
+		}
+		else {
+			throw new RouteException("There is no route present of routeId :" + routeId);
+		}
 	}
 
 	@Override
@@ -106,17 +118,7 @@ public class RouteServiceImpl  implements RouteService{
 		
 	}
 
-	@Override
-	public Route viewRoute(int routeId) throws RouteException {
-		
-    Optional<Route> existedRoute=roD.findById(routeId);
-		if(existedRoute.isPresent()) {
-			return existedRoute.get();
-		}
-		else {
-			throw new RouteException("There is no route present of routeId :" + routeId);
-		}
-	}
+	
 
 	@Override
 	public List<Route> viewAllRoute() throws RouteException {

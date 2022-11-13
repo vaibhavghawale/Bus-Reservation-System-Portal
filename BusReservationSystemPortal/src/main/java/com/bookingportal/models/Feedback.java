@@ -37,9 +37,14 @@ public class Feedback {
 	private String comments;
 	private LocalDateTime feedbackDateTime;
 	
+	
+	//it is unidiractnal relationship between feedback and user 
+	//USER -----> FEEDBACK 
 	@OneToOne
 	private User user;
 
+	//it is unidiractnal relationship between feedback and BUS
+	//BUS -----> FEEDBACK 
 	@OneToOne
 	private Bus bus;
 

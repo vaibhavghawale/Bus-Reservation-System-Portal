@@ -32,9 +32,14 @@ public class Reservation {
 	private Integer noOfSeatsBooked;
 	private Integer fare;
 	
+	//it is unidiractnal relationship between reservation to bus
+	//RESERVATION ------> BUS (MANY TO ONE)
+	
 	@ManyToOne
 	private Bus bus;
 	
+	//it is bidiractnal relationship between reservation to use
+	//RESERVATION <------> USER (MANY TO ONE)
 	@ManyToOne
 	private User user;
 	
