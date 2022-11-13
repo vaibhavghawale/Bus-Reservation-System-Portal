@@ -42,7 +42,7 @@ public class BusController {
 		
 		Bus newBus=busService.updateBus(bus,key);
 		
-		return new ResponseEntity<Bus>(newBus,HttpStatus.FOUND);
+		return new ResponseEntity<Bus>(newBus,HttpStatus.OK);
 	}
 	
 	@DeleteMapping("/bus/admin/{busId}")

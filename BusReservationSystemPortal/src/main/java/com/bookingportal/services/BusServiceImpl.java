@@ -109,7 +109,7 @@ CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 
 	@Override
 	public Bus viewBus(Integer busId) throws BusException {
-Optional<Bus> bus=busDao.findById(busId);
+		Optional<Bus> bus=busDao.findById(busId);
 		
 		if(bus.isPresent()) {
 			Bus existingBus = bus.get();
@@ -122,7 +122,7 @@ Optional<Bus> bus=busDao.findById(busId);
 	@Override
 	public List<Bus> viewBusByType(String BusType) throws BusException {
 
-		List<Bus> buses= busDao.findAll();
+		List<Bus> buses= busDao.findByBusType(BusType);
 		if(buses.size()>0)
 			return buses;
 		else
@@ -131,7 +131,7 @@ Optional<Bus> bus=busDao.findById(busId);
 
 	@Override
 	public List<Bus> viewAllBuses() throws BusException {
-		 List<Bus> listOfBusType = busDao.findByBusType(BusType);
+		 List<Bus> listOfBusType = busDao.findAll();
 			
 			if(listOfBusType.size() >0)
 				return listOfBusType;
