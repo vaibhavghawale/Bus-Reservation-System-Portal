@@ -1,4 +1,4 @@
-package com.root;
+package com.bookignportal;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
