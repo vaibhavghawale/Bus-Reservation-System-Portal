@@ -23,7 +23,7 @@
 
 <!-- ============================================  CONTRIBUTORS ======================================================  -->
 ## Our Team Members 👨‍💻
-  - **[@Vaibhav Ghawale](https://github.com/thecodervaibhav)**
+  - **[@Vaibhav Ghawale](https://thecodervaibhav.github.io)**
   - **[@Akash Kumar Singh](https://github.com/akashsinghdto55)**
   - **[@Gitanjali Makadi](https://github.com/geetamakadi123)**
   - **[@Virendra Kumar Dwivedi](https://github.com/Virendrakumardwivedi)**
