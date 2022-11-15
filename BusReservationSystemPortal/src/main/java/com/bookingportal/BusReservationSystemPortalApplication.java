@@ -48,9 +48,9 @@ public class BusReservationSystemPortalApplication {
 
 	    		   "1.0",
 	    		   "Free to use",
-	    		   new springfox.documentation.service.Contact("Happy Tour & Travels", "https://github.com/thecodervaibhav/berserk-camera-3158", "ggmakadi1997@gmail.com"),
+	    		   new springfox.documentation.service.Contact("Happy Tour & Travels", "https://github.com/thecodervaibhav/Bus-Reservation-System-Portal", "vaibhavghawale007@gmail.com"),
 	    		   "API License",
-	    		   "https://github.com/thecodervaibhav/berserk-camera-3158",
+	    		   "https://github.com/thecodervaibhav/Bus-Reservation-System-Portal",
 	    		  
 	    		   Collections.emptyList());
 	    		   
