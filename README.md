@@ -61,7 +61,7 @@
 The following Diagram depicts the flow of our Entity Relation Diagram to simplify the work flow.
 <br>
 <br>
-
+<img src="https://github.com/thecodervaibhav/Bus-Reservation-System-Portal/blob/main/ER.jpg"></img>
 <br>
 <br>
 
