@@ -95,3 +95,6 @@ SWAGGER UI Documentation - `http://localhost:8888/swagger-ui/`
 `https://localhost:8888/`
   
 `http://localhost:8888/swagger-ui/`
+
+user this data for checking purpose.
+https://docs.google.com/document/d/1CYr7EZSQnhmWe79GcmUsD0zdj6c-a0WThkhW9Nxx2n8/edit?usp=sharing
