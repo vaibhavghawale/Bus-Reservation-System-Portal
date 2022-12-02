@@ -39,7 +39,7 @@ public class BusReservationSystemPortalApplication {
 	
 	 private ApiInfo getApiInfo() {
 	       return new ApiInfo(
-	    		   "Happy Tour and Travels",
+	    		   "Bus Reservation Portal System",
 	    		   "Team members :\n \"Vaibhav Ghavale\",\r\n"
 	    		   + "\"Riya Negi\",\r\n"
 	    		   + "\"Virendra Kumar\",\r\n"

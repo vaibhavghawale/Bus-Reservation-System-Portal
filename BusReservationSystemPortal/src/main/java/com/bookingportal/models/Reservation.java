@@ -13,10 +13,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+
+
+
+              //----------------- This is a Bean Class where we get a all variable which we need in Reservation part-------------------------------------//
+
+//----------- Here we need to Encapsulate all the data member and data method in single unit for use out side just create getter and seeter ----------------------// 
+
+@Entity										// Its Bean class so have to annotated with the @Entity  
+@Data									    //Lambok for creating setter and getter method.
+@NoArgsConstructor						    //No argument constructor create using annonatation
+@AllArgsConstructor						    //parameterize argument constructor create using annonatation
 public class Reservation {
 	
 	@Id
@@ -32,14 +39,15 @@ public class Reservation {
 	private Integer noOfSeatsBooked;
 	private Integer fare;
 	
-	//it is unidiractnal relationship between reservation to bus
-	//RESERVATION ------> BUS (MANY TO ONE)
+	//it is UniDirectional relationship between reservation to bus
+	//RESERVATION --------------------> BUS (MANY TO ONE)
 	
 	@ManyToOne
 	private Bus bus;
 	
-	//it is bidiractnal relationship between reservation to use
-	//RESERVATION <------> USER (MANY TO ONE)
+	//it is bidirectional relationship between reservation to use
+	//RESERVATION <----------------------> USER (MANY TO ONE)
+	
 	@ManyToOne
 	private User user;
 	

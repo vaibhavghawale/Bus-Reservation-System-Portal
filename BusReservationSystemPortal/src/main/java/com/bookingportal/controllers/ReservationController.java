@@ -23,14 +23,14 @@ import com.bookingportal.models.Reservation;
 import com.bookingportal.services.ReservationService;
 
 
-@RestController
+@RestController							//RestController Annotation is use for 
 public class ReservationController {
 	
 	
-	@Autowired
+	@Autowired		//@Autowired annotation is use for achieve a loose coupling Injecting Setter  
 	private ReservationService reservationService;
 	
-	@PostMapping("/reservation/user")
+	@PostMapping("/reservation/user")			//
 	public ResponseEntity<Reservation> addReservation(@Valid @RequestBody ReservationDTO reservationDTO ,@RequestParam(required = false) String key) throws ReservationException, BusException, UserException{
 		Reservation savedReservation =reservationService.addReservation(reservationDTO,key);
 		return new ResponseEntity<Reservation>(savedReservation,HttpStatus.ACCEPTED);
