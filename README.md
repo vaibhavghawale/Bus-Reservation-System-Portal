@@ -61,7 +61,7 @@
 The following Diagram depicts the flow of our Entity Relation Diagram to simplify the work flow.
 <br>
 <br>
-<img src="https://github.com/thecodervaibhav/Bus-Reservation-System-Portal/blob/main/ER.jpg"></img>
+<img src=""></img>
 <br>
 <br>
 
@@ -97,4 +97,4 @@ SWAGGER UI Documentation - `http://localhost:8888/swagger-ui/`
 `http://localhost:8888/swagger-ui/`
 
 user this data for checking purpose.
-https://docs.google.com/document/d/1CYr7EZSQnhmWe79GcmUsD0zdj6c-a0WThkhW9Nxx2n8/edit?usp=sharing
+- **[@Demo Data](https://docs.google.com/document/d/1BixwmAqMjVAWdZ3jfslPvVOtOg77fsf_DHmPVhRkQBs/edit?usp=sharing)
