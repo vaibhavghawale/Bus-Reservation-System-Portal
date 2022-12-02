@@ -98,3 +98,8 @@ SWAGGER UI Documentation - `http://localhost:8888/swagger-ui/`
 
 user this data for checking purpose.
 - **[@Demo Data](https://docs.google.com/document/d/1BixwmAqMjVAWdZ3jfslPvVOtOg77fsf_DHmPVhRkQBs/edit?usp=sharing)
+
+
+## Responsibilities:-
+### Vaibhav Ghawale 
+<p>Creating a Reservation Module.</p>
