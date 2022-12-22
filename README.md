@@ -59,9 +59,8 @@
 # ER Diagram
 
 The following Diagram depicts the flow of our Entity Relation Diagram to simplify the work flow.
+<br>![NewER](https://user-images.githubusercontent.com/101354104/209176876-e921e2ed-5e08-4128-b236-251ce955646b.jpg)
 <br>
-<br>
-<img src=""></img>
 <br>
 <br>
 
