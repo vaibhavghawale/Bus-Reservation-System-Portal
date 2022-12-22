@@ -101,4 +101,12 @@ user this data for checking purpose.
 
 ## Responsibilities:-
 ### Vaibhav Ghawale 
-<p>Creating a Reservation Module.</p>
+<p>Created Reservation Module.</p>
+### Gitanjali Makadi
+</p>Created Feedback Module</p>
+### Akash
+</p>Created Admin login Module</p>
+### Riya Negi
+</p>Created Bus Module</p>
+### Virendra 
+</p>Created Route Module</p>
