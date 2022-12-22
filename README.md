@@ -88,11 +88,16 @@ SWAGGER UI Documentation - `http://localhost:8888/swagger-ui/`
 ```
 
 ## Responsibilities:-
-### Vaibhav Ghawale 
+<h4>Vaibhav Ghawale </h4>
 <p>Created Reservation module and Checking all fundamental CRUD operation tesing</p>
-
-
-
+<h4> Gitanjali Makadi</h4>
+</p>Created Feedback Module</p>
+<h4> Akash Kumar</h4>
+</p>Created Admin login Module</p>
+<h4>Riya Negi</h4>
+</p>Created Bus Module</p>
+<h4>Virendra Dwivedi</h4>
+</p>Created Route Module</p>
 
 <!-- ============================================  API ROOT ENDPOINTS ======================================================  -->
 
