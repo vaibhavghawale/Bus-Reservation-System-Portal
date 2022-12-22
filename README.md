@@ -87,7 +87,15 @@ SWAGGER UI Documentation - `http://localhost:8888/swagger-ui/`
 
 ```
 
+## Responsibilities:-
+### Vaibhav Ghawale 
+<p>Created Reservation module and Checking all fundamental CRUD operation tesing</p>
+
+
+
+
 <!-- ============================================  API ROOT ENDPOINTS ======================================================  -->
+
 
 ## API Root Endpoint
 
@@ -98,7 +106,27 @@ SWAGGER UI Documentation - `http://localhost:8888/swagger-ui/`
 user this data for checking purpose.
 - **[@Demo Data](https://docs.google.com/document/d/1BixwmAqMjVAWdZ3jfslPvVOtOg77fsf_DHmPVhRkQBs/edit?usp=sharing)(click here to demo data)
 
+## Start Point
+<img width="957" alt="Screenshot (2376)" src="https://user-images.githubusercontent.com/101354104/209181391-5e015973-fdd3-46da-8c25-e66dcc9b0a6b.png">
 
-## Responsibilities:-
-### Vaibhav Ghawale 
-<p>Creating a Reservation Module.</p>
+## Admin Module
+<img width="944" alt="Screenshot (2377)" src="https://user-images.githubusercontent.com/101354104/209181373-dd33a760-085c-4861-93ec-57a7cdf4c874.png">
+
+## User Module
+<img width="938" alt="Screenshot (2382)" src="https://user-images.githubusercontent.com/101354104/209181267-0bb48a94-b8e0-43d5-a51c-c944784d5d37.png">
+
+## Route Module
+<img width="941" alt="Screenshot (2381)" src="https://user-images.githubusercontent.com/101354104/209181296-17df297f-0316-4ed4-8447-f7a1ad594ede.png">
+
+## Bus Module
+<img width="941" alt="Screenshot (2380)" src="https://user-images.githubusercontent.com/101354104/209181319-22cc8857-24e9-4c71-9bc1-37f99d78bc48.png">
+
+
+## Reservation Module
+<img width="940" alt="Screenshot (2379)" src="https://user-images.githubusercontent.com/101354104/209181339-114190a4-49f7-4b66-8e99-18488bc1d982.png">
+
+## Feedback Module
+<img width="943" alt="Screenshot (2378)" src="https://user-images.githubusercontent.com/101354104/209181358-585d40ef-eaca-4cef-b430-c243c956f5f9.png">
+
+
+
