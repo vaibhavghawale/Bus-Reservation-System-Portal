@@ -103,3 +103,5 @@ user this data for checking purpose.
 ## Responsibilities:-
 ### Vaibhav Ghawale 
 <p>Creating a Reservation Module.</p>
+### Akash Kumar Singh
+<p>Created Login and Logout Module along with the SessionId Key to Validate Admin and User.</p>
