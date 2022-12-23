@@ -25,7 +25,7 @@ public class AdminLoginServiceImpl implements AdminLoginService {
 	private AdminSessionDao adminSessionDao;
 
 	@Override
-	public CurrentAdminSession logIntoAdminAccount(AdminLoginDTO dto) throws LoginException {
+	public CurrentAdminSession logIntoAdminAccount(AdminLoginDTO dto)  {
 
 		Admin existingAdmin= adminDao.findByMobileNumber(dto.getMobileNumber());
 		
@@ -55,7 +55,7 @@ public class AdminLoginServiceImpl implements AdminLoginService {
 	}
 
 	@Override
-	public String logOutFromAdminAccount(String key) throws LoginException {
+	public String logOutFromAdminAccount(String key) {
 
 		CurrentAdminSession validAdminSession = adminSessionDao.findByUuid(key);
 		

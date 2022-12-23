@@ -6,7 +6,7 @@ import com.bookingportal.models.CurrentAdminSession;
 
 public interface AdminLoginService {
 
-	public CurrentAdminSession logIntoAdminAccount(AdminLoginDTO dto)throws LoginException;
+	public CurrentAdminSession logIntoAdminAccount(AdminLoginDTO dto);
 
-	public String logOutFromAdminAccount(String key)throws LoginException;
+	public String logOutFromAdminAccount(String key);
 }

@@ -1,6 +1,6 @@
 package com.bookingportal.exceptions;
 
-public class BusException extends Exception {
+public class BusException extends RuntimeException {
 	
 	
 	public BusException(String message) {
