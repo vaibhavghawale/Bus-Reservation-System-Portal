@@ -1,3 +1,5 @@
+<h1 align="center"> Hi,<img style="width: 35px;" src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" alt=""> Everyone <a href="#" target="_blank"> Welcome </a></h1>
+
 <!-- ============================================  TITLE ======================================================  -->
 # REST API for Bus Reservation System Portal
 
@@ -59,9 +61,8 @@
 # ER Diagram
 
 The following Diagram depicts the flow of our Entity Relation Diagram to simplify the work flow.
+<br>![NewER](https://user-images.githubusercontent.com/101354104/209176876-e921e2ed-5e08-4128-b236-251ce955646b.jpg)
 <br>
-<br>
-<img src=""></img>
 <br>
 <br>
 
@@ -88,7 +89,20 @@ SWAGGER UI Documentation - `http://localhost:8888/swagger-ui/`
 
 ```
 
+## Responsibilities:-
+<h4>Vaibhav Ghawale </h4>
+<p>Created Reservation module and Checking all fundamental CRUD operation tesing</p>
+<h4> Gitanjali Makadi</h4>
+</p>Created Feedback Module</p>
+<h4> Akash Kumar</h4>
+</p>Created Admin login Module</p>
+<h4>Riya Negi</h4>
+</p>Created Bus Module</p>
+<h4>Virendra Dwivedi</h4>
+</p>Created Route Module</p>
+
 <!-- ============================================  API ROOT ENDPOINTS ======================================================  -->
+
 
 ## API Root Endpoint
 
@@ -99,9 +113,29 @@ SWAGGER UI Documentation - `http://localhost:8888/swagger-ui/`
 user this data for checking purpose.
 - **[@Demo Data](https://docs.google.com/document/d/1BixwmAqMjVAWdZ3jfslPvVOtOg77fsf_DHmPVhRkQBs/edit?usp=sharing)(click here to demo data)
 
+## Following pictures help to understand flow of Application And All API's of Bus Reservation Portal System
+## Start Point
+<img width="957" alt="Screenshot (2376)" src="https://user-images.githubusercontent.com/101354104/209181391-5e015973-fdd3-46da-8c25-e66dcc9b0a6b.png">
 
-## Responsibilities:-
-### Vaibhav Ghawale 
-<p>Creating a Reservation Module.</p>
-### Akash Kumar Singh
-<p>Created Login and Logout Module along with the SessionId Key to Validate Admin and User.</p>
+## Admin Module
+<img width="944" alt="Screenshot (2377)" src="https://user-images.githubusercontent.com/101354104/209181373-dd33a760-085c-4861-93ec-57a7cdf4c874.png">
+
+## User Module
+<img width="938" alt="Screenshot (2382)" src="https://user-images.githubusercontent.com/101354104/209181267-0bb48a94-b8e0-43d5-a51c-c944784d5d37.png">
+
+## Route Module
+<img width="941" alt="Screenshot (2381)" src="https://user-images.githubusercontent.com/101354104/209181296-17df297f-0316-4ed4-8447-f7a1ad594ede.png">
+
+## Bus Module
+<img width="941" alt="Screenshot (2380)" src="https://user-images.githubusercontent.com/101354104/209181319-22cc8857-24e9-4c71-9bc1-37f99d78bc48.png">
+
+
+## Reservation Module
+<img width="940" alt="Screenshot (2379)" src="https://user-images.githubusercontent.com/101354104/209181339-114190a4-49f7-4b66-8e99-18488bc1d982.png">
+
+## Feedback Module
+<img width="943" alt="Screenshot (2378)" src="https://user-images.githubusercontent.com/101354104/209181358-585d40ef-eaca-4cef-b430-c243c956f5f9.png">
+
+<h1 align="center"> <img style="width: 35px;" src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" alt=""> Thank You <img style="width: 35px;" src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" alt=""> <a href="https://reliable-llama-c038f5.netlify.app/" target="_blank"> </a></h1>
+
+
