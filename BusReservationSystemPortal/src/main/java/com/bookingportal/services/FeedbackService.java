@@ -10,14 +10,14 @@ import com.bookingportal.models.Feedback;
 
 public interface FeedbackService {
 		
-	public Feedback addFeedBack(Feedback feedBack,Integer busId,String key) throws BusException, UserException;
+	public Feedback addFeedBack(Feedback feedBack,Integer busId,String key);
 	
-	public Feedback updateFeedBack(Feedback feedback,String key) throws FeedBackException, UserException;
+	public Feedback updateFeedBack(Feedback feedback,String key);
 	
 
 
-	public Feedback viewFeedback(Integer id) throws FeedBackException;
+	public Feedback viewFeedback(Integer id);
 
-	public List<Feedback> viewFeedbackAll() throws FeedBackException;
+	public List<Feedback> viewFeedbackAll() ;
 	
 }

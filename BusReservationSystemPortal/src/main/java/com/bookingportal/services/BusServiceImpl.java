@@ -1,9 +1,5 @@
 package com.bookingportal.services;
 
-
-
-	
-
 import java.time.LocalDate;
 import java.util.*;
 
@@ -36,7 +32,7 @@ public class BusServiceImpl implements BusService{
 	
 
 	@Override
-	public Bus addBus(Bus bus, String key) throws BusException, AdminException {
+	public Bus addBus(Bus bus, String key)  {
     CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 		
 		if(loggedInAdmin == null) {
@@ -57,7 +53,7 @@ public class BusServiceImpl implements BusService{
 	}
 
 	@Override
-	public Bus updateBus(Bus bus, String key) throws BusException, AdminException {
+	public Bus updateBus(Bus bus, String key) {
 CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 		
 		if(loggedInAdmin == null) {
@@ -82,7 +78,7 @@ CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 	}
 
 	@Override
-	public Bus deleteBus(Integer busId, String key) throws BusException, AdminException {
+	public Bus deleteBus(Integer busId, String key)  {
     CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 		
 		if(loggedInAdmin == null) {
@@ -120,7 +116,7 @@ CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 	}
 
 	@Override
-	public List<Bus> viewBusByType(String BusType) throws BusException {
+	public List<Bus> viewBusByType(String BusType) {
 
 		List<Bus> buses= busDao.findByBusType(BusType);
 		if(buses.size()>0)
@@ -130,7 +126,7 @@ CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 	}
 
 	@Override
-	public List<Bus> viewAllBuses() throws BusException {
+	public List<Bus> viewAllBuses() {
 		 List<Bus> listOfBusType = busDao.findAll();
 			
 			if(listOfBusType.size() >0)

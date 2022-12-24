@@ -9,16 +9,16 @@ import com.bookingportal.models.Bus;
 public interface BusService {
 
 
-	public Bus addBus(Bus bus,String key) throws BusException, AdminException;
+	public Bus addBus(Bus bus,String key) ;
 	
-	public Bus updateBus(Bus bus,String key) throws BusException, AdminException;
+	public Bus updateBus(Bus bus,String key);
 	
-	public Bus deleteBus(Integer busId,String key) throws BusException, AdminException;
+	public Bus deleteBus(Integer busId,String key);
 	
-	public Bus viewBus(Integer busId) throws BusException;
+	public Bus viewBus(Integer busId);
 	
-	public List<Bus> viewBusByType(String BusType) throws BusException;
+	public List<Bus> viewBusByType(String BusType);
 	
-	public List<Bus> viewAllBuses() throws BusException;
+	public List<Bus> viewAllBuses();
 
 }

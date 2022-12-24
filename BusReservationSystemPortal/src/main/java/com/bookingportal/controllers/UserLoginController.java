@@ -22,7 +22,7 @@ public class UserLoginController {
 	private UserLoginService userLogin;
 	
 	@PostMapping("/login/user")
-	public ResponseEntity<CurrentUserSession> logInUser(@Valid @RequestBody UserLoginDTO dto) throws LoginException {
+	public ResponseEntity<CurrentUserSession> logInUser(@Valid @RequestBody UserLoginDTO dto)  {
 		
 		CurrentUserSession result = userLogin.logIntoUserAccount(dto);
 		
@@ -31,7 +31,7 @@ public class UserLoginController {
 	}
 	
 	@PostMapping("/logout/user")
-	public String logoutUser(@RequestParam(required = false) String key) throws LoginException {
+	public String logoutUser(@RequestParam(required = false) String key) {
 		
 		return userLogin.logOutFromUserAccount(key);
 		

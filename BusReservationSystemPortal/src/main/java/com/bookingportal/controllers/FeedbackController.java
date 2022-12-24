@@ -32,7 +32,7 @@ public class FeedbackController {
 	@PostMapping("/feedback/user/{busid}")
 	public ResponseEntity<Feedback> addFeedback(@Valid @RequestBody Feedback feedback,
 												@PathVariable("busid") Integer busId,
-												@RequestParam(required = false) String key) throws UserException,BusException{
+												@RequestParam(required = false) String key){
 		
 		Feedback feedback1 = feedbackService.addFeedBack(feedback,busId,key);
 		
@@ -41,7 +41,7 @@ public class FeedbackController {
 	}
 	
 	@PutMapping("/feedback/user")
-	public ResponseEntity<Feedback> updateFeedback(@Valid @RequestBody Feedback feedback,@RequestParam(required = false) String key) throws FeedBackException, UserException {
+	public ResponseEntity<Feedback> updateFeedback(@Valid @RequestBody Feedback feedback,@RequestParam(required = false) String key) {
 		
 		Feedback feedback1 = feedbackService.updateFeedBack(feedback,key);
 		
@@ -53,7 +53,7 @@ public class FeedbackController {
 //	viewFeedback
 	
 	@GetMapping("/feedback/{id}")
-	public ResponseEntity<Feedback> viewFeedback(@PathVariable("id") Integer ID) throws FeedBackException {
+	public ResponseEntity<Feedback> viewFeedback(@PathVariable("id") Integer ID)  {
 		
 		Feedback feedback1 = feedbackService.viewFeedback(ID);
 		
@@ -62,7 +62,7 @@ public class FeedbackController {
 	}
 	
 	@GetMapping("/feedback")
-	public ResponseEntity<List<Feedback>> viewFeedbackAll() throws FeedBackException {
+	public ResponseEntity<List<Feedback>> viewFeedbackAll() {
 		
 		List<Feedback> feedback1 =  feedbackService.viewFeedbackAll();
 		

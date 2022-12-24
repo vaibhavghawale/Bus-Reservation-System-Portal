@@ -6,7 +6,7 @@ import com.bookingportal.models.CurrentUserSession;
 
 public interface UserLoginService {
 
-	public CurrentUserSession logIntoUserAccount(UserLoginDTO dto)throws LoginException;
+	public CurrentUserSession logIntoUserAccount(UserLoginDTO dto);
 
-	public String logOutFromUserAccount(String key)throws LoginException;
+	public String logOutFromUserAccount(String key);
 }

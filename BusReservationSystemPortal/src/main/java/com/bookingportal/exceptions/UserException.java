@@ -1,6 +1,6 @@
 package com.bookingportal.exceptions;
 
-public class UserException extends Exception{
+public class UserException extends RuntimeException{
 	
     public UserException() {
 		

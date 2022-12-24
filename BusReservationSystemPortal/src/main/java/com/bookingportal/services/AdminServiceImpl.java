@@ -19,7 +19,7 @@ public class AdminServiceImpl implements AdminService{
 	private AdminSessionDao adminSessionDao;
 	
 	@Override
-	public Admin createAdmin(Admin admin) throws AdminException {
+	public Admin createAdmin(Admin admin){
 		
 		Admin existingAdmin= adminDao.findByMobileNumber(admin.getMobileNumber());
 		
@@ -31,7 +31,7 @@ public class AdminServiceImpl implements AdminService{
 	}
 	
 	@Override
-	public Admin updateAdmin(Admin admin, String key) throws AdminException {
+	public Admin updateAdmin(Admin admin, String key) {
 		
 		CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 		
