@@ -4,7 +4,7 @@ package com.bookingportal.exceptions;
 // This a User Defined Exception which we created for use where we get a Reservation Exception.
 
 
-public class ReservationException extends Exception {
+public class ReservationException extends RuntimeException {
 
 //	/**
 //	 * 

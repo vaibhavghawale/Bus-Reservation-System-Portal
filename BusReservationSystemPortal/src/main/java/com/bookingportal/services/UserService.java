@@ -8,13 +8,13 @@ import com.bookingportal.models.User;
 
 public interface UserService {
 
-public User createUser(User user)throws UserException;
+public User createUser(User user);
 	
-	public User updateUser(User user,String key)throws UserException;
+	public User updateUser(User user,String key);
 	
-	public User deleteUser(Integer userId,String key) throws UserException, AdminException;
+	public User deleteUser(Integer userId,String key);
 	
-	public User viewUserById(Integer userId, String key) throws UserException, AdminException;
+	public User viewUserById(Integer userId, String key);
 	
-	public List<User> viewUsers(String key) throws UserException, AdminException; 
+	public List<User> viewUsers(String key); 
 }

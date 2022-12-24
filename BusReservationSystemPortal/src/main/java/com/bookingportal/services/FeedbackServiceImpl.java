@@ -38,7 +38,7 @@ public class FeedbackServiceImpl implements FeedbackService {
 
 	
 	@Override
-	public Feedback addFeedBack(Feedback feedBack, Integer busId, String key) throws BusException, UserException {
+	public Feedback addFeedBack(Feedback feedBack, Integer busId, String key) {
 CurrentUserSession loggedInUser= userSessionDao.findByUuid(key);
 		
 		if(loggedInUser == null) {
@@ -63,7 +63,7 @@ CurrentUserSession loggedInUser= userSessionDao.findByUuid(key);
 	}
 
 	@Override
-	public Feedback updateFeedBack(Feedback feedback, String key) throws FeedBackException, UserException {
+	public Feedback updateFeedBack(Feedback feedback, String key) {
      CurrentUserSession loggedInUser= userSessionDao.findByUuid(key);
 		
 		if(loggedInUser == null) {
@@ -95,7 +95,7 @@ CurrentUserSession loggedInUser= userSessionDao.findByUuid(key);
 	
 
 	@Override
-	public Feedback viewFeedback(Integer id) throws FeedBackException {
+	public Feedback viewFeedback(Integer id){
 		// TODO Auto-generated method stub
 		Optional<Feedback> feedOptional = feedDao.findById(id);
 		if (feedOptional.isPresent()) {
@@ -108,7 +108,7 @@ CurrentUserSession loggedInUser= userSessionDao.findByUuid(key);
 	}
 
 	@Override
-	public List<Feedback> viewFeedbackAll() throws FeedBackException {
+	public List<Feedback> viewFeedbackAll() {
 		// TODO Auto-generated method stub
 		Optional<List<Feedback>> feedOptional = Optional.of(feedDao.findAll());
 		if (feedOptional.isPresent()) {

@@ -122,6 +122,7 @@ SWAGGER UI Documentation - `http://localhost:8888/swagger-ui/`
 ```
 
 
+
 <!-- ============================================  API ROOT ENDPOINTS ======================================================  -->
 
 
@@ -157,5 +158,4 @@ user this data for checking purpose.
 ## Feedback Module
 <img width="943" alt="Screenshot (2378)" src="https://user-images.githubusercontent.com/101354104/209181358-585d40ef-eaca-4cef-b430-c243c956f5f9.png">
 
-<h1 align="center"> <img style="width: 35px;" src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" alt=""> Thank You <img style="width: 35px;" src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" alt=""> <a href="https://reliable-llama-c038f5.netlify.app/" target="_blank"> </a></h1>
 

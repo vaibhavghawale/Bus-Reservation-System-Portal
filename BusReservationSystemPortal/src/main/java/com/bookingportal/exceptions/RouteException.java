@@ -1,6 +1,6 @@
 package com.bookingportal.exceptions;
 
-public class RouteException extends Exception {
+public class RouteException extends RuntimeException {
 	
       public RouteException() {
     	  

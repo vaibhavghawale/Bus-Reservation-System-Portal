@@ -33,7 +33,7 @@ public class RouteServiceImpl  implements RouteService{
 	
 	
 	@Override
-	public Route addRoute(Route route, String key) throws RouteException, AdminException {
+	public Route addRoute(Route route, String key) {
      
 		CurrentAdminSession logInAdmin = asD.findByUuid(key);
 		if(logInAdmin==null) {
@@ -58,7 +58,7 @@ public class RouteServiceImpl  implements RouteService{
 	}
 	
 	@Override
-	public Route viewRoute(int routeId) throws RouteException {
+	public Route viewRoute(int routeId){
 		
     Optional<Route> existedRoute=roD.findById(routeId);
 		if(existedRoute.isPresent()) {
@@ -70,7 +70,7 @@ public class RouteServiceImpl  implements RouteService{
 	}
 
 	@Override
-	public Route updateRoute(Route route, String key) throws RouteException, AdminException {
+	public Route updateRoute(Route route, String key) {
 		CurrentAdminSession logInAdmin = asD.findByUuid(key);
 		if(logInAdmin==null) {
 			throw new AdminException("This is not not valid key");
@@ -97,7 +97,7 @@ public class RouteServiceImpl  implements RouteService{
 	}
 
 	@Override
-	public Route deleteRoute(int routeId, String key) throws RouteException, AdminException {
+	public Route deleteRoute(int routeId, String key) {
 		CurrentAdminSession logInAdmin = asD.findByUuid(key);
 		if(logInAdmin==null) {
 			throw new AdminException("This is not not valid key");
@@ -121,7 +121,7 @@ public class RouteServiceImpl  implements RouteService{
 	
 
 	@Override
-	public List<Route> viewAllRoute() throws RouteException {
+	public List<Route> viewAllRoute(){
      List<Route> routes=roD.findAll();
 		if(routes.size()>0) {
 			return routes;

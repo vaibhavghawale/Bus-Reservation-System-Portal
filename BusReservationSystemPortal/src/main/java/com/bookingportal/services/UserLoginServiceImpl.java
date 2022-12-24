@@ -25,7 +25,7 @@ public class UserLoginServiceImpl implements UserLoginService{
 	private UserSessionDao userSessionDao;
 
 	@Override
-	public CurrentUserSession logIntoUserAccount(UserLoginDTO dto) throws LoginException {
+	public CurrentUserSession logIntoUserAccount(UserLoginDTO dto){
 
 		User existingUser= userDao.findByMobileNumber(dto.getMobileNumber());
 		
@@ -55,7 +55,7 @@ public class UserLoginServiceImpl implements UserLoginService{
 	}
 
 	@Override
-	public String logOutFromUserAccount(String key) throws LoginException {
+	public String logOutFromUserAccount(String key)  {
 				
 		CurrentUserSession validUserSession = userSessionDao.findByUuid(key);
 		

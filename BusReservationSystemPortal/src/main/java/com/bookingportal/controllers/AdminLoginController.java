@@ -22,7 +22,7 @@ public class AdminLoginController {
 	private AdminLoginService adminLogin;
 	
 	@PostMapping("/login/admin")
-	public ResponseEntity<CurrentAdminSession> logInAdmin(@Valid @RequestBody AdminLoginDTO dto) throws LoginException {
+	public ResponseEntity<CurrentAdminSession> logInAdmin(@Valid @RequestBody AdminLoginDTO dto) {
 		
 		CurrentAdminSession result = adminLogin.logIntoAdminAccount(dto);
 		
@@ -31,7 +31,7 @@ public class AdminLoginController {
 	}
 	
 	@PostMapping("/logout/admin")
-	public String logoutAdmin(@RequestParam(required = false) String key) throws LoginException {
+	public String logoutAdmin(@RequestParam(required = false) String key) {
 		
 		return adminLogin.logOutFromAdminAccount(key);
 		

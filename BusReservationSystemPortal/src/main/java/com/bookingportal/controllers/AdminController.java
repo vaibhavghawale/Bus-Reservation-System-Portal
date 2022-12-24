@@ -23,7 +23,7 @@ public class AdminController {
 	
 	
 	@PostMapping("/admin")
-	public ResponseEntity<Admin> saveAdmin(@Valid @RequestBody Admin admin) throws AdminException {
+	public ResponseEntity<Admin> saveAdmin(@Valid @RequestBody Admin admin) {
 		
 		Admin savedAdmin= adminService.createAdmin(admin);
 		
@@ -31,7 +31,7 @@ public class AdminController {
 	}
 	
 	@PutMapping("/admin")
-	public  ResponseEntity<Admin> updateAdmin(@Valid @RequestBody Admin admin,@RequestParam(required = false) String key ) throws AdminException {
+	public  ResponseEntity<Admin> updateAdmin(@Valid @RequestBody Admin admin,@RequestParam(required = false) String key ){
 		
 		Admin updatedAdmin= adminService.updateAdmin(admin, key);
 				

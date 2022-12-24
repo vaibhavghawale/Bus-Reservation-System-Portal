@@ -1,6 +1,6 @@
 package com.bookingportal.exceptions;
 
-public class FeedBackException extends Exception {
+public class FeedBackException extends RuntimeException {
 	
 	
 		

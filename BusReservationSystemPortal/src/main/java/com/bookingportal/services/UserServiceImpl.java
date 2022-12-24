@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService {
 	private AdminSessionDao adminSessionDao;
 	
 	@Override
-	public User createUser(User user) throws UserException {
+	public User createUser(User user){
 		
 		User existingUser= userDao.findByMobileNumber(user.getMobileNumber());
 		
@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
 	
 	}
 	@Override
-	public User updateUser(User user, String key) throws UserException {
+	public User updateUser(User user, String key) {
 		
 		CurrentUserSession loggedInUser= userSessionDao.findByUuid(key);
 		
@@ -58,7 +58,7 @@ public class UserServiceImpl implements UserService {
 	
 	
 	@Override
-	public User deleteUser(Integer userId, String key) throws UserException, AdminException {
+	public User deleteUser(Integer userId, String key) {
 		
 		CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 		
@@ -72,7 +72,7 @@ public class UserServiceImpl implements UserService {
 		
 	}
 	@Override
-	public User viewUserById(Integer userId, String key) throws UserException, AdminException {
+	public User viewUserById(Integer userId, String key){
 
 		CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 		
@@ -85,7 +85,7 @@ public class UserServiceImpl implements UserService {
 	}
 	
 	@Override
-	public List<User> viewUsers(String key) throws UserException, AdminException {
+	public List<User> viewUsers(String key){
 		
 		CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 		

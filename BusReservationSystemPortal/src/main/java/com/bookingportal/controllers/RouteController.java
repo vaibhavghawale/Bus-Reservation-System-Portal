@@ -30,7 +30,7 @@ public class RouteController {
 	private RouteService RouteS;
 	
 	@PostMapping("/route/admin")
-	public ResponseEntity<Route> addNewRoute(@Valid @RequestBody Route route,@RequestParam(required = false) String  key) throws RouteException, AdminException{
+	public ResponseEntity<Route> addNewRoute(@Valid @RequestBody Route route,@RequestParam(required = false) String  key) {
 		
 		Route newRout = RouteS.addRoute(route, key);
 		return new ResponseEntity<>(newRout,HttpStatus.ACCEPTED);
@@ -38,7 +38,7 @@ public class RouteController {
 	}
 	
 	@DeleteMapping("/route/admin/{routeId}")
-	public ResponseEntity<Route> DeleteRoute(@PathVariable("routeId") Integer routeId,@RequestParam(required = false) String key) throws RouteException, AdminException{
+	public ResponseEntity<Route> DeleteRoute(@PathVariable("routeId") Integer routeId,@RequestParam(required = false) String key)  {
 		
 		Route route = RouteS.deleteRoute(routeId,key);
 		
@@ -46,7 +46,7 @@ public class RouteController {
 	}
 	
 	@GetMapping("/route/{routeId}")
-	public ResponseEntity<Route> getRouteById(@PathVariable("routeId") Integer routeId) throws RouteException{
+	public ResponseEntity<Route> getRouteById(@PathVariable("routeId") Integer routeId){
 		
 		Route route = RouteS.viewRoute(routeId);
 		
@@ -54,7 +54,7 @@ public class RouteController {
 	}
 	
 	@GetMapping("/routes")
-	public ResponseEntity<List<Route>> getAllRoutes() throws RouteException{
+	public ResponseEntity<List<Route>> getAllRoutes(){
 		
 		List<Route> routes = RouteS.viewAllRoute();
 		

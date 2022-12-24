@@ -5,8 +5,8 @@ import com.bookingportal.models.Admin;
 
 public interface AdminService {
 	
-    public Admin createAdmin(Admin admin)throws AdminException;
+    public Admin createAdmin(Admin admin);
 	
-	public Admin updateAdmin(Admin admin,String key)throws AdminException;
+	public Admin updateAdmin(Admin admin,String key);
 
 }

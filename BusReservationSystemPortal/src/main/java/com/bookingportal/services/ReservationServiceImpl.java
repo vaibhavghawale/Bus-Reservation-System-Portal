@@ -42,7 +42,7 @@ public class ReservationServiceImpl implements ReservationService {
 	
 	
 	@Override
-	public Reservation addReservation(ReservationDTO reservationDTO, String key) throws ReservationException, BusException, UserException {
+	public Reservation addReservation(ReservationDTO reservationDTO, String key){
 			
 		CurrentUserSession loggedInUser= userSessionDao.findByUuid(key);
 		
@@ -98,7 +98,7 @@ public class ReservationServiceImpl implements ReservationService {
 	}
 
 	@Override
-	public Reservation deleteReservation(Integer reservationId, String key) throws ReservationException, BusException, UserException {
+	public Reservation deleteReservation(Integer reservationId, String key){
 		CurrentUserSession loggedInUser= userSessionDao.findByUuid(key);
 		
 		if(loggedInUser == null) {
@@ -138,7 +138,7 @@ public class ReservationServiceImpl implements ReservationService {
 	}
 
 	@Override
-	public Reservation viewReservation(Integer reservId, String key) throws ReservationException {
+	public Reservation viewReservation(Integer reservId, String key) {
 		
 		CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 		
@@ -153,7 +153,7 @@ public class ReservationServiceImpl implements ReservationService {
 	}
 
 	@Override
-	public List<Reservation> viewAllReservation(String key) throws ReservationException {
+	public List<Reservation> viewAllReservation(String key) {
 CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 		
 		if(loggedInAdmin == null) {
@@ -166,7 +166,7 @@ CurrentAdminSession loggedInAdmin= adminSessionDao.findByUuid(key);
 	}
 
 	@Override
-	public List<Reservation> viewReservationByUser(String key) throws ReservationException, UserException {
+	public List<Reservation> viewReservationByUser(String key) {
 		
 		CurrentUserSession loggedInUser= userSessionDao.findByUuid(key);
 		
