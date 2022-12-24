@@ -30,7 +30,7 @@ public class BusController {
 	private BusService busService;
 	
 	@PostMapping("/bus/admin")
-	public ResponseEntity<Bus> addBus(@Valid @RequestBody Bus bus,@RequestParam(required = false) String key) throws BusException, AdminException{
+	public ResponseEntity<Bus> addBus(@Valid @RequestBody Bus bus,@RequestParam(required = false) String key){
 		
 		Bus newBus=busService.addBus(bus,key);
 		
@@ -38,7 +38,7 @@ public class BusController {
 	}
 	
 	@PutMapping("/bus/admin")
-	public ResponseEntity<Bus> updateBus(@Valid @RequestBody Bus bus,@RequestParam(required = false) String key) throws BusException, AdminException{
+	public ResponseEntity<Bus> updateBus(@Valid @RequestBody Bus bus,@RequestParam(required = false) String key){
 		
 		Bus newBus=busService.updateBus(bus,key);
 		
@@ -46,7 +46,7 @@ public class BusController {
 	}
 	
 	@DeleteMapping("/bus/admin/{busId}")
-	public ResponseEntity<Bus> DeleteBus(@PathVariable("busId") Integer busId,@RequestParam(required = false) String key) throws BusException, AdminException{
+	public ResponseEntity<Bus> DeleteBus(@PathVariable("busId") Integer busId,@RequestParam(required = false) String key) {
 		
 		Bus bus=busService.deleteBus(busId,key);
 		
@@ -54,7 +54,7 @@ public class BusController {
 	}
 	
 	@GetMapping("/bus")
-	public ResponseEntity<Bus> getBusesById(@RequestParam Integer busId) throws BusException{
+	public ResponseEntity<Bus> getBusesById(@RequestParam Integer busId){
 		
 		Bus bus=busService.viewBus(busId);
 		
@@ -63,7 +63,7 @@ public class BusController {
 	
 	
 	@GetMapping("/buses/{busType}")
-	public ResponseEntity<List<Bus>> getBusesByType(@PathVariable("busType") String busType) throws BusException{
+	public ResponseEntity<List<Bus>> getBusesByType(@PathVariable("busType") String busType) {
 		
 		List<Bus> listOfBuses=busService.viewBusByType(busType);
 		
@@ -71,7 +71,7 @@ public class BusController {
 	}
 	
 	@GetMapping("/buses")
-	public ResponseEntity<List<Bus>> getAllBuses() throws BusException{
+	public ResponseEntity<List<Bus>> getAllBuses() {
 		
 		List<Bus> listOfBuses=busService.viewAllBuses();
 		
