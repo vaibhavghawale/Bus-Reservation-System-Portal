@@ -1,3 +1,5 @@
+<h1 align="center"> Hi,<img style="width: 35px;" src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" alt=""> Everyone <a href="#" target="_blank"> Welcome </a></h1>
+
 <!-- ============================================  TITLE ======================================================  -->
 # REST API for Bus Reservation System Portal
 
@@ -88,15 +90,9 @@ SWAGGER UI Documentation - `http://localhost:8888/swagger-ui/`
 ```
 
 ## Responsibilities:-
-### Vaibhav Ghawale 
+<h4>Vaibhav Ghawale </h4>
 <p>Created Reservation module and Checking all fundamental CRUD operation tesing</p>
-### Gitanjali Makadi
-</p>Created Feedback Module</p>
-### Akash Kumar
-</p>Created Admin login Module</p>
-### Riya Negi
-</p>Created Bus Module</p>
-### Virendra Dwivedi
+
 </p>Created Route Module</p>
 
 <!-- ============================================  API ROOT ENDPOINTS ======================================================  -->
@@ -111,6 +107,7 @@ SWAGGER UI Documentation - `http://localhost:8888/swagger-ui/`
 user this data for checking purpose.
 - **[@Demo Data](https://docs.google.com/document/d/1BixwmAqMjVAWdZ3jfslPvVOtOg77fsf_DHmPVhRkQBs/edit?usp=sharing)(click here to demo data)
 
+## Following pictures help to understand flow of Application And All API's of Bus Reservation Portal System
 ## Start Point
 <img width="957" alt="Screenshot (2376)" src="https://user-images.githubusercontent.com/101354104/209181391-5e015973-fdd3-46da-8c25-e66dcc9b0a6b.png">
 
@@ -132,4 +129,5 @@ user this data for checking purpose.
 
 ## Feedback Module
 <img width="943" alt="Screenshot (2378)" src="https://user-images.githubusercontent.com/101354104/209181358-585d40ef-eaca-4cef-b430-c243c956f5f9.png">
+
 
