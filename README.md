@@ -3,11 +3,25 @@
 <!-- ============================================  TITLE ======================================================  -->
 # REST API for Bus Reservation System Portal
 
-<!-- ============================================  DETAILS ======================================================  -->
+
 
 <li>An Collabrative Project Consisting Of the 5 Developer Depicting the implementation of Bus Reservation System Platform like Red Bus or Yatra.
 <li>The REST API performs all the fundamental CRUD operations and business logics of any Trip Management System like RedBus with user authentication at every API endpoint.
 <br>
+
+<!-- ============================================  ER - DIAGRAM ======================================================  -->
+
+# ER Diagram
+
+The following Diagram depicts the flow of our Entity Relation Diagram to simplify the work flow.
+<br>![NewER](https://user-images.githubusercontent.com/101354104/209176876-e921e2ed-5e08-4128-b236-251ce955646b.jpg)
+<br>
+<br>
+<br>
+
+<!-- ============================================  DETAILS ======================================================  -->
+
+
 
  
 <!-- ============================================  FEATURES ======================================================  -->
@@ -23,13 +37,39 @@
     * Viewing list of available Route and available Bus for a trip
     * Only logged in user can access his reservations, profile updation and other features.
 
+    <!-- Video -->
+
+# 👉 [Click here](https://drive.google.com/file/d/1id3nI-2F2u4dGjg9Y1eMlUXSsJEdiN1u/view?usp=sharing) to get better understanding of the application.
+
+
 <!-- ============================================  CONTRIBUTORS ======================================================  -->
-## Our Team Members 👨‍💻
-  - **[@Vaibhav Ghawale](https://thecodervaibhav.github.io)**
-  - **[@Akash Kumar Singh](https://github.com/akashsinghdto55)**
-  - **[@Gitanjali Makadi](https://github.com/geetamakadi123)**
-  - **[@Virendra Kumar Dwivedi](https://github.com/Virendrakumardwivedi)**
-  - **[@Riya Negi](https://github.com/RiyaNegi03)**
+## Contributors👨‍💻
+  👤 **[@Vaibhav Ghawale](https://thecodervaibhav.github.io)** <br>
+GitHub: [codervaibhav](https://github.com/akashsinghdto55) <br>
+LinkedIn: [Vaibhav Ghawale](https://www.linkedin.com/in/akash-singh-a11458213/)
+<br>Worked on Reservation Module
+
+👤 **[@Akash Kumar Singh](https://akashsinghdto55.github.io/)** <br>
+GitHub: [akashsinghdto55](https://github.com/thecodervaibhav) <br>
+LinkedIn: [Akash Kumar Singh](https://www.linkedin.com/in/vaibhavghawale15/)
+<br>Worked on Admin Module
+
+  👤 **[@Virendra Kumar Dwivedi](https://virendrakumardwivedi.github.io/)** <br>
+GitHub: [Virendrakumardwivedi](https://github.com/Virendrakumardwivedi) <br>
+LinkedIn: [Virendra kumar dwivedi](https://www.linkedin.com/in/virendra-kumar-dwivedi-824692233/)
+<br>Worked on Route Module
+
+👤 **[@Riya Negi](https://riyanegi03.github.io/)** <br>
+GitHub: [RiyaNegi03](https://github.com/RiyaNegi03) <br>
+LinkedIn: [Riya Negi](https://www.linkedin.com/in/riya-negi-601084210/)
+<br>Worked on Bus Module
+
+👤 **[@Gitanjali Makadi](https://geetamakadi123.github.io/)** <br>
+GitHub: [geetamakadi123](https://github.com/geetamakadi123) <br>
+LinkedIn: [Gitanjali Makadi](https://www.linkedin.com/in/gitanjali-m-36157a233/)
+<br>Worked on Feedback Module
+
+
 
 <!-- ============================================  TECH STACK ======================================================  -->
 
@@ -56,15 +96,7 @@
 * Reservation Module
 * Feedback Module
 
-<!-- ============================================  ER - DIAGRAM ======================================================  -->
 
-# ER Diagram
-
-The following Diagram depicts the flow of our Entity Relation Diagram to simplify the work flow.
-<br>![NewER](https://user-images.githubusercontent.com/101354104/209176876-e921e2ed-5e08-4128-b236-251ce955646b.jpg)
-<br>
-<br>
-<br>
 
 <!-- ============================================  DOCUMENTATION ======================================================  -->
 
@@ -89,17 +121,6 @@ SWAGGER UI Documentation - `http://localhost:8888/swagger-ui/`
 
 ```
 
-## Responsibilities:-
-<h4>Vaibhav Ghawale </h4>
-<p>Created Reservation module and Checking all fundamental CRUD operation tesing</p>
-<h4> Gitanjali Makadi</h4>
-</p>Created Feedback Module</p>
-<h4> Akash Kumar</h4>
-</p>Created Admin login Module</p>
-<h4>Riya Negi</h4>
-</p>Created Bus Module</p>
-<h4>Virendra Dwivedi</h4>
-</p>Created Route Module</p>
 
 <!-- ============================================  API ROOT ENDPOINTS ======================================================  -->
 
@@ -113,7 +134,7 @@ SWAGGER UI Documentation - `http://localhost:8888/swagger-ui/`
 user this data for checking purpose.
 - **[@Demo Data](https://docs.google.com/document/d/1BixwmAqMjVAWdZ3jfslPvVOtOg77fsf_DHmPVhRkQBs/edit?usp=sharing)(click here to demo data)
 
-## Following pictures help to understand flow of Application And All API's of Bus Reservation Portal System
+## Following pictures will help to understand flow of the Application and API's of Bus Reservation Portal System
 ## Start Point
 <img width="957" alt="Screenshot (2376)" src="https://user-images.githubusercontent.com/101354104/209181391-5e015973-fdd3-46da-8c25-e66dcc9b0a6b.png">
 
