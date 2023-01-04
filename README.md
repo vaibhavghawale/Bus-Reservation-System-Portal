@@ -46,12 +46,12 @@ The following Diagram depicts the flow of our Entity Relation Diagram to simplif
 ## Contributors👨‍💻
   👤 **[@Vaibhav Ghawale](https://thecodervaibhav.github.io)** <br>
 GitHub: [codervaibhav](https://github.com/akashsinghdto55) <br>
-LinkedIn: [Vaibhav Ghawale](https://www.linkedin.com/in/akash-singh-a11458213/)
+LinkedIn: [Vaibhav Ghawale](https://www.linkedin.com/in/vaibhavghawale15/)
 <br>Worked on Reservation Module
 
 👤 **[@Akash Kumar Singh](https://akashsinghdto55.github.io/)** <br>
 GitHub: [akashsinghdto55](https://github.com/thecodervaibhav) <br>
-LinkedIn: [Akash Kumar Singh](https://www.linkedin.com/in/vaibhavghawale15/)
+LinkedIn: [Akash Kumar Singh](https://www.linkedin.com/in/akash-singh-a11458213/)
 <br>Worked on Admin Module
 
   👤 **[@Virendra Kumar Dwivedi](https://virendrakumardwivedi.github.io/)** <br>
