@@ -137,7 +137,7 @@ user this data for checking purpose.
 
 ## Following pictures will help to understand flow of the Application and API's of Bus Reservation Portal System
 ## Start Point
-<img width="957" alt="Screenshot (2376)" src="https://user-images.githubusercontent.com/101354104/209181391-5e015973-fdd3-46da-8c25-e66dcc9b0a6b.png">
+<img width="957" alt="Screenshot (2376)" src="https://www.linkpicture.com/q/Admin_Module_Pic.png">
 
 ## Admin Module
 <img width="944" alt="Screenshot (2377)" src="https://user-images.githubusercontent.com/101354104/209181373-dd33a760-085c-4861-93ec-57a7cdf4c874.png">
