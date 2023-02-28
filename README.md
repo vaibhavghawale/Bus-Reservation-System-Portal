@@ -5,7 +5,7 @@
 
 
 
-<li>An Collabrative Project Consisting Of the 5 Developer Depicting the implementation of Bus Reservation System Platform like Red Bus or Yatra.
+<li>An Collaborative Project Consisting Of the 5 Developer Depicting the implementation of Bus Reservation System Platform like Red Bus or Yatra.
 <li>The REST API performs all the fundamental CRUD operations and business logics of any Trip Management System like RedBus with user authentication at every API endpoint.
 <br>
 
